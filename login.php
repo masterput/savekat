@@ -1,3 +1,7 @@
+<?php
+require('cat/config.php');
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,17 +22,17 @@
               <h2 class="card-title">Login</h2>
               <h6 class="card-subtitle text-muted mb-4 mt-2 fw-bold">Please login to use this site!</h6>
 
-              <form>
+              <form action="cat/login-process.php" method="POST">
                 <div class="mb-4">
-                  <label for="exampleInputEmail1" class="form-label">Email*</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+                  <label for="email" class="form-label">Email*</label>
+                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Your Email" required>
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password*</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Min 8 character">
+                  <label for="password" class="form-label">Password*</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Min 8 character" required>
                 </div>
 
-                <div class="d-flex justify-content-between">
+                <!--<div class="d-flex justify-content-between">
                     <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
@@ -37,14 +41,14 @@
                     <div>
                         <a href="#" class="link">Forgot Password ?</a>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="d-grid mt-3">
-                    <button type="submit" class="btn btn-custom btn-login">Login</button>
+                    <button type="submit" name="login" class="btn btn-custom btn-login">Login</button>
                 </div>
 
                 <div class="mt-3 text-center">
-                    <label>Not registered yet ? <a href="#" class="link">Create an account</a></label>
+                    <label>Not registered yet ? <a href="signup.php" class="link">Create an account</a></label>
                 </div>
             </form>
             </div>
