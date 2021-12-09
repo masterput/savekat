@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: 130px;
+}
+
+.nav-link a {
+    color: #440000;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-image: url(../images/hero/cat-hero.jpg);
+    background-size: cover;
+    height: 450px;
+    text-align: center;
+    position: relative;
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron .display-4 {
+    color: white;
+    font-weight: 200;
+    margin-top: 80px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    font-size: 62px;
+    margin-bottom: 40px;
+}
+
+.jumbotron .display-4 span {
+    font-weight: 500;
+    color: white;
+}
+
+.jumbotron .lead {
+    font-weight: 400;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* Card */
+.card-list .text-header h3 {
+    color: #440000;
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+/* .card-content {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-color: white;
+} */
+
+.card-content .icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content .card-title {
+    color: #440000;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+/* Button */
+.button-start {
+    margin-top: 30px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    padding: 15px 25px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #440000;
+    color: white;
+}
+
+.footer-title {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-logo img {
+    height: 80px;
+    width: 180px;
+}
+
+footer p {
+    color: white;
+    font-size: 14px;
+}
+
+footer p a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer p a:hover{
+    color: #ACACAC;
+}
+
+.footer-copyright {
+    text-align: center;
+    background-color: #290000;
+    color: white;
+}
+
+/* Detail */
+.location {
+    font-size: 20px;
+}
+
+.location-icon {
+    color: rgb(0, 100, 8);
+    margin-right: 5px;
+}
+
+.card-detail {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.card-detail .bullet {
+    padding: 0 5px;
+}
+
+/* Card Detail User*/
+.card-detail__user .card-image__user {
+    font-size: 30px;
+    text-align: center;
+}
+
+.card-detail__user .card-title__user {
+    font-size: 24px;
+    text-align: center;
+}
