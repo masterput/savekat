@@ -25,19 +25,19 @@ require('./cat/signup_proses.php');
               <form action="signup_process.php" method="POST">
                 <div class="mb-4">
                     <label for="name" class="form-label">Name*</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Your Name" Required>
+                    <input type="text" class="form-control" id="name" name="name" aria-label="Masukkan nama anda" placeholder="Your Name" Required>
                 </div>
                 <div class="mb-4">
                     <label for="username" class="form-label">Username*</label>
-                    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Your Username" Required>
+                    <input type="text" class="form-control" id="username" name="username" aria-label="Masukkan username anda" placeholder="Your Username" Required>
                 </div>
                 <div class="mb-4">
                   <label for="email" class="form-label">Email*</label>
-                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Your Email" Required>
+                  <input type="email" class="form-control" id="email" name="email" aria-label="Masukkan email anda" placeholder="Your Email" Required>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password*</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Min 8 character" Required>
+                  <input type="password" class="form-control" id="password" name="password" aria-label="Masukkan password anda" placeholder="Min 8 character" Required>
                 </div>
 
                 <div class="d-grid mt-5">
