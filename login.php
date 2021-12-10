@@ -25,11 +25,11 @@ require('cat/config.php');
               <form action="cat/login-process.php" method="POST">
                 <div class="mb-4">
                   <label for="email" class="form-label">Email*</label>
-                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Your Email" required>
+                  <input type="email" class="form-control" id="email" name="email" aria-label="Masukkan email anda" placeholder="Your Email" required>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password*</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Min 8 character" required>
+                  <input type="password" class="form-control" id="password" name="password" aria-label="Masukkan password anda" placeholder="Min 8 character" required>
                 </div>
 
                 <!--<div class="d-flex justify-content-between">
