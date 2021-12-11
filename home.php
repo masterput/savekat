@@ -42,11 +42,9 @@
     <!-- hero -->
     <div class="jumbotron jumbotron fluid px-4 py-4 bg-light">
         <div class="container">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Find. Love. Care.</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-                        popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
-                        extensive prebuilt components, and powerful JavaScript plugins.</p>
-            <a href="#main-content" class="btn btn-primary button-start">Get Started Now! :3</a>
+            <h1 class="display-4 fw-bold lh-1 mb-3">Cari. Cintai. Rawat.</h1>
+            <p class="lead">Cari kucing yang cocok denganmu disini.</p>
+            <a href="#main-content" class="btn btn-primary button-start">Mulai Sekarang! :3</a>
         </div>
     </div>
 
@@ -54,7 +52,7 @@
     <!-- card -->
     <div class="container">
         <div class="text-center mb-5 mt-5 text-header">
-            <h3>Cats Available for Adoption</h3>
+            <h3 id="main-content">Kucing Yang Siap Untuk Diadopsi</h3>
         </div>
         <div class="row">
         <?php
