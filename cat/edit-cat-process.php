@@ -1,7 +1,6 @@
 <?php
+require('config.php');
 if(isset($_POST['edit'])){
- 
- require('config.php');
       $id = $_POST['id'];
       $nama = $_POST['name'];
       $usia = $_POST['age'];
@@ -15,16 +14,16 @@ if(isset($_POST['edit'])){
       $no_rekening = $_POST['bank'];
 
  
- $update = mysqli_query("UPDATE data_kucing SET nama='$nama', age='$usia', species='$jenis_kucing', 
- weight='$berat', gender='$jenis_kelamin', description='$deskripsi', location='$lokasi' WHERE id='$id'");
- 
+ $update = mysqli_query($koneksi, "UPDATE data_kucing SET nama='$nama', umur='$usia', jenis_kucing='$jenis_kucing', 
+ berat='$berat', jenis_kelamin='$jenis_kelamin', deskripsi='$deskripsi', lokasi='$lokasi', nomor_telp='$telp', nama_rekening='$nama_rekening', no_rekening='$no_rekening' WHERE id='$id'") or die(mysqli_error($koneksi));
+
  //jika query update sukses
  if($update){
   
   echo '
         <script>
         alert("Data berhasil diperbarui!");
-        document.location.href="../cat-detail.php";
+        document.location.href="../";
         </script>
         ';
   
@@ -32,13 +31,9 @@ if(isset($_POST['edit'])){
   echo '
         <script>
         alert("Data gagal diperbarui!");
-        document.location.href="../edit-cat.php";
+        document.location.href="../";
         </script>
         ';  
  }
-
-} else{ //jika tidak terdeteksi tombol simpan di klik
- echo '<script>window.history.back()</script>';
-
 }
 ?>
