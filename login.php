@@ -1,5 +1,5 @@
 <?php
-require('cat/config.php');
+require('cat/login-process.php');
 ?>
 
 <!doctype html>
@@ -8,21 +8,38 @@ require('cat/config.php');
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Form Login</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./img/logo/SaveKat-Icon(White).png" type="image/png">
+    <title>Login</title>
   </head>
   <body>
+    <?php 
+    session_start();
+    if(isset($_SESSION['email'])) {
+      header('location: index.php');
+  }
+    ?>
     <div class="container">
-        <div class="card login-form">             
+      <div class="card-login">
+      <div class="card login-form">             
             <div class="card-body">
+            <?php 
+            if(isset($_SESSION['login'])) {
+                ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert"><?php echo $_SESSION['login']; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <?php 
+                unset($_SESSION['login']);
+            }
+            ?>
               <h2 class="card-title">Login</h2>
               <h6 class="card-subtitle text-muted mb-4 mt-2 fw-bold">Please login to use this site!</h6>
 
-              <form action="cat/login-process.php" method="POST">
+              <form action="" method="POST">
                 <div class="mb-4">
                   <label for="email" class="form-label">Email*</label>
                   <input type="email" class="form-control" id="email" name="email" aria-label="Masukkan email anda" placeholder="Your Email" required>
@@ -53,6 +70,7 @@ require('cat/config.php');
             </form>
             </div>
           </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
