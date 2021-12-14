@@ -1,7 +1,6 @@
 <?php
-require('./cat/signup_proses.php');
+require('cat/signup-process.php');
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,9 +10,9 @@ require('./cat/signup_proses.php');
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/style.css">
-
-    <title>Form Sign-Up</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./img/logo/SaveKat-Icon(White).png" type="image/png">
+    <title>Sign-Up</title>
   </head>
   <body>
     <div class="container">
@@ -22,7 +21,7 @@ require('./cat/signup_proses.php');
               <h2 class="card-title">Sign-Up</h2>
               <h6 class="card-subtitle text-muted mb-4 mt-2 fw-bold">Please sign-up to use this site!</h6>
 
-              <form action="signup_process.php" method="POST">
+              <form action="" method="POST">
                 <div class="mb-4">
                     <label for="name" class="form-label">Name*</label>
                     <input type="text" class="form-control" id="name" name="name" aria-label="Masukkan nama anda" placeholder="Your Name" Required>
