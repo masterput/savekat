@@ -13,11 +13,7 @@
 <body>
     <?php
     session_start();
-    // if(isset($_SESSION['email']) == "") {
-    //     header('location:login.php');
-    // }
     ?>
-    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./img/logo/SaveKat.png" alt="Logo SaveKat"></a>
@@ -64,7 +60,6 @@
             </div>
         </div>
     </nav>
-    <!-- hero -->
 
     <?php 
     include "menu.php";
