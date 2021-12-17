@@ -18,7 +18,7 @@
             <a href="#main-content" class="btn btn-primary button-start">Get Started Now! :3</a>
         </div>
     </div>
-    <!-- card -->
+
     <div class="container" id="main-content">
         <div class="text-center mb-5 mt-5 text-header">
             <h3>Cats Available for Adoption</h3>
@@ -31,7 +31,7 @@
             ?>
             <div class="col-sm-3 mb-3">
                 <div class="card">
-                    <img src="<?php echo $cat['gambar'] ?>" class="card-img-top" alt="...">
+                    <img src="cat/images/<?php echo $cat['gambar'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <div class="icon">
                             <h5 class="card-title"><?php echo $cat['nama'] ?></h5>
