@@ -48,18 +48,6 @@ require('cat/login-process.php');
                   <label for="password" class="form-label">Password*</label>
                   <input type="password" class="form-control" id="password" name="password" aria-label="Masukkan password anda" placeholder="Min 8 character" required>
                 </div>
-
-                <!--<div class="d-flex justify-content-between">
-                    <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                    </div>
-
-                    <div>
-                        <a href="#" class="link">Forgot Password ?</a>
-                    </div>
-                </div> -->
-
                 <div class="d-grid mt-3">
                     <button type="submit" name="login" class="btn btn-custom btn-login">Login</button>
                 </div>
