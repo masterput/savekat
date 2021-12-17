@@ -38,11 +38,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="index.php?page=add-cat">Tambah Kucing Baru</a></li>
-                            <li><a class="dropdown-item" href="edit-user.php">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="logout-process.php">Logout</a></li>
                         </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="logout-process.php">Logout</a>
                         </li>
                         <?php 
                     } else if (isset($_SESSION['email']) == ""){
