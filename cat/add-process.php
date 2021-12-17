@@ -13,9 +13,10 @@ if(isset($_POST['add'])) {
     $telp = $_POST['phone'];
     $nama_rekening = $_POST['bank_name'];
     $no_rekening = $_POST['bank'];
+    $user_id = $_POST['user_id'];
 
     // uplaod gamabr
-    $namaFolder="cat/images/"; 
+    $namaFolder="images/"; 
     if(!empty($_FILES["images"]["tmp_name"])) {
         $jenis_gambar = $_FILES['images']['type'];
         if($jenis_gambar == "image/jpeg" || $jenis_gambar == "image/jpg" || 
@@ -24,14 +25,14 @@ if(isset($_POST['add'])) {
 
             if(move_uploaded_file($_FILES['images']['tmp_name'], $gambar)) {
 
-            $insert = mysqli_query($koneksi, "INSERT INTO data_kucing (nama, umur, jenis_kucing, berat, jenis_kelamin, deskripsi, gambar, lokasi, nomor_telp, nama_rekening, no_rekening) 
-                VALUES ('$nama','$usia','$jenis_kucing','$berat','$jenis_kelamin','$deskripsi','$gambar','$lokasi', '$telp', '$nama_rekening', '$no_rekening')");
+            $insert = mysqli_query($koneksi, "INSERT INTO data_kucing (nama, umur, jenis_kucing, berat, jenis_kelamin, deskripsi, gambar, lokasi, nomor_telp, nama_rekening, no_rekening, user_id) 
+                VALUES ('$nama','$usia','$jenis_kucing','$berat','$jenis_kelamin','$deskripsi','$gambar','$lokasi', '$telp', '$nama_rekening', '$no_rekening', '$user_id')");
 
                 if($insert) {
                     echo '
                     <script>
                     alert("Input Data Berhasil");
-                    document.location.href="../capstone/home.php";
+                    document.location.href="../capstone_lima/index.php";
                     </script>
                     ';
                 } else {
