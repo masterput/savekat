@@ -3,6 +3,7 @@ require('config.php');
 
 // proses login
 if(isset($_POST['login'])){
+    session_start();
     // jika tombol login diklik
 
     $email = $_POST['email'];
@@ -17,7 +18,9 @@ if(isset($_POST['login'])){
     if($hitung>0) {
         // verifikasi password
         if(password_verify($password,$passwordSekarang)) {
-            header('location:home.php'); // redirect ke halaman home
+            $_SESSION['email'] = $pw['email'];
+            $_SESSION['id'] = $pw['id'];
+            header('location:index.php'); // redirect ke halaman index
         } else {
             echo '
         <script>
