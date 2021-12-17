@@ -38,6 +38,7 @@ require('cat/signup-process.php');
                   <label for="password" class="form-label">Password*</label>
                   <input type="password" class="form-control" id="password" name="password" aria-label="Masukkan password anda" placeholder="Min 8 character" Required>
                 </div>
+                <input type="hidden" value="user" name="level">
 
                 <div class="d-grid mt-5">
                     <button type="submit" name="register" class="btn btn-custom btn-login">Sign Up</button>
