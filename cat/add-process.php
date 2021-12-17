@@ -15,36 +15,51 @@ if(isset($_POST['add'])) {
     $no_rekening = $_POST['bank'];
     $user_id = $_POST['user_id'];
 
-    // uplaod gamabr
-    $namaFolder="images/"; 
-    if(!empty($_FILES["images"]["tmp_name"])) {
-        $jenis_gambar = $_FILES['images']['type'];
-        if($jenis_gambar == "image/jpeg" || $jenis_gambar == "image/jpg" || 
-        $jenis_gambar == "image/gif" || $jenis_gambar == "image/png") {
-            $gambar = $namaFolder.basename($_FILES['images']['name']);
+    //upload gambar
+    $ekstensi_diperbolehkan = ['png', 'jpg'];
+    $gambar = $_FILES['images']['name'];
+    $eks = explode('.', $gambar);
+    $ekstensi = strtolower(end($eks));
 
-            if(move_uploaded_file($_FILES['images']['tmp_name'], $gambar)) {
+    $ukuran = $_FILES['images']['size'];
+    $tmp = $_FILES['images']['tmp_name'];
+
+    if(in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
+        if($ukuran < 10044070) {
+            move_uploaded_file($tmp, 'cat/images/'.$gambar);
 
             $insert = mysqli_query($koneksi, "INSERT INTO data_kucing (nama, umur, jenis_kucing, berat, jenis_kelamin, deskripsi, gambar, lokasi, nomor_telp, nama_rekening, no_rekening, user_id) 
                 VALUES ('$nama','$usia','$jenis_kucing','$berat','$jenis_kelamin','$deskripsi','$gambar','$lokasi', '$telp', '$nama_rekening', '$no_rekening', '$user_id')");
 
-                if($insert) {
-                    echo '
-                    <script>
-                    alert("Input Data Berhasil");
-                    document.location.href="../capstone_lima/index.php";
-                    </script>
-                    ';
-                } else {
-                    echo '
-                    <script>
-                    alert("Input Data Gagal");
-                    document.location.href="../add-cat.php";
-                    </script>';
-                }
+            if($insert) {
+                echo '
+                <script>
+                alert("Data Berhasil Ditambahkan");
+                document.location.href="index.php";
+                </script>
+                ';
+            } else {
+                echo '
+                <script>
+                alert("Data Gagal Ditambahkan");
+                document.location.href="../add-cat.php";
+                </script>';
             }
+        } else {
+            echo '
+                <script>
+                alert("Ukuran Terlalu Besar");
+                document.location.href="../add-cat.php";
+                </script>';
         }
+    } else {
+        echo '
+                <script>
+                alert("Ekstensi tidak diperbolehkan");
+                document.location.href="../add-cat.php";
+                </script>';
     }
+
 }
 
 ?>
