@@ -1,5 +1,5 @@
-    <div class="jumbotron jumbotron fluid px-4 py-4 bg-light">
-        <div class="container container-jumbotron">
+<div class="jumbotron jumbotron fluid px-4 py-4 bg-light">
+        <div class="container">
             <?php 
             if(isset($_SESSION['logout'])) {
                 ?>
@@ -29,7 +29,7 @@
             ?>
             <div class="col-sm-4 mb-3">
                 <div class="card card-cat">
-                    <img src="<?php echo $cat['gambar'] ?>" class="card-image" alt="...">
+                    <img src="cat/images/<?php echo $cat['gambar'] ?>" class="card-image" alt="...">
                     <div class="card-body">
                         <div class="icon">
                             <h5 class="card-title"><?php echo $cat['nama'] ?></h5>
@@ -54,5 +54,7 @@
             <?php
         }
         ?>
+        <div class="d-flex justify-content-around mt-5">
         </div>
+    </div>
     </div>
