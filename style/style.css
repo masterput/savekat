@@ -75,9 +75,9 @@
 
 /* Jumbotron */
 .jumbotron {
-    background-image: url(../images/hero/cat-hero.jpg);
+    background-image: url(../img/hero/cat-hero.jpg);
     background-size: cover;
-    height: 450px;
+    height: 500px;
     text-align: center;
     position: relative;
 }
@@ -107,7 +107,7 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
 }
 
-/* Main Content */
+/* main content */
 .text-header {
     margin: 20px;
 }
@@ -171,6 +171,11 @@
     font-size: 24px;
 }
 
+/* Image Detail*/
+.img-detail {
+    width: 280px;
+    height: 200px;
+}
 
 /* Button */
 .button-start {
@@ -188,7 +193,6 @@
     background-color: #440000;
     color: white;
 }
-
 .btn-login:hover {
     color: white;
     background-color: #4d1616;
