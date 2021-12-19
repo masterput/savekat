@@ -21,8 +21,8 @@ require('cat/add-process.php')
                 </div>
             </div>
             <div class="form-group mb-3">
-                <label>Jenis Kucing</label>
-                    <select class="form-control" name="species">
+                <label class="form-label">Jenis Kucing</label>
+                    <select class="form-select" name="species">
                         <option>-Pilih Jenis Kucing-</option>
                         <option>Domestik/Kampung</option>
                         <option>Anggora</option>
@@ -39,8 +39,8 @@ require('cat/add-process.php')
                 </div>
             </div>
             <div class="form-group mb-6">
-                <label>Jenis Kelamin</label>
-                    <select class="form-control" name="gender">
+                <label class="form-label">Jenis Kelamin</label>
+                    <select class="form-select" name="gender">
                         <option>-Pilih Jenis Kelamin Kucing-</option>
                         <option>Jantan</option>
                         <option>Betina</option>
@@ -50,7 +50,7 @@ require('cat/add-process.php')
                 
             </div>
             <div class="mb-3">
-                <label for="description">Deskripsi</label>
+                <label for="description" class="form-label">Deskripsi</label>
                 <textarea class="form-control" id="description" name="description" rows="3" placeholder="Masukkan deskripsi mengenai kucing anda .." Required></textarea>
             </div>
             <div class="mb-3">
@@ -58,8 +58,8 @@ require('cat/add-process.php')
                 <input type="file" name="images" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
             </div>
             <div class="form-group mb-3">
-                <label>Lokasi</label>
-                    <select class="form-control" name="location">
+                <label class="form-label">Lokasi</label>
+                    <select class="form-select" name="location">
                         <option>-Pilih Lokasi-</option>
                         <option>Bandung</option>
                         <option>Tangerang</option>
