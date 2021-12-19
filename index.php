@@ -21,7 +21,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link <?php if(isset($_GET['page']) == "home") {echo '';}  else { echo 'active';} ?>" aria-current="page" href="index.php">Home</a>
@@ -63,12 +63,10 @@
     ?>
 
     <footer class="text-center text-lg-start text-muted mt-5">
-    
         <section class="">
             <div class="container text-center text-md-start pt-5">
                 <div class="row">
                     <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-                        <!-- Content -->
                         <div class="footer-logo">
                             <img src="./img/logo/SaveKat(White Ver.).png" alt="">
                         </div>
