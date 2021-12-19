@@ -15,32 +15,33 @@ require('cat/signup-process.php');
     <title>Sign-Up</title>
   </head>
   <body>
-    <div class="container">
-        <div class="card login-form">             
+    <div class="container container-signup">
+        <div class="card-signup">             
             <div class="card-body">
               <h2 class="card-title">Sign-Up</h2>
               <h6 class="card-subtitle text-muted mb-4 mt-2 fw-bold">Please sign-up to use this site!</h6>
 
               <form action="" method="POST">
-                <div class="mb-4">
-                    <label for="name" class="form-label">Name*</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-label="Masukkan nama anda" placeholder="Your Name" Required>
+                <div class="input-signup">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name*</label>
+                      <input type="text" class="form-control" id="name" name="name" aria-label="Masukkan nama anda" placeholder="Your Name" Required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="username" class="form-label">Username*</label>
+                      <input type="text" class="form-control" id="username" name="username" aria-label="Masukkan username anda" placeholder="Your Username" Required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-label="Masukkan email anda" placeholder="Your Email" Required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password*</label>
+                    <input type="password" class="form-control" id="password" name="password" aria-label="Masukkan password anda" placeholder="Min 8 character" Required>
+                  </div>
                 </div>
-                <div class="mb-4">
-                    <label for="username" class="form-label">Username*</label>
-                    <input type="text" class="form-control" id="username" name="username" aria-label="Masukkan username anda" placeholder="Your Username" Required>
-                </div>
-                <div class="mb-4">
-                  <label for="email" class="form-label">Email*</label>
-                  <input type="email" class="form-control" id="email" name="email" aria-label="Masukkan email anda" placeholder="Your Email" Required>
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Password*</label>
-                  <input type="password" class="form-control" id="password" name="password" aria-label="Masukkan password anda" placeholder="Min 8 character" Required>
-                </div>
-                <input type="hidden" value="user" name="level">
 
-                <div class="d-grid mt-5">
+                <div class="d-grid mt-4">
                     <button type="submit" name="register" class="btn btn-custom btn-login">Sign Up</button>
                 </div>
 
