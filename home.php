@@ -11,17 +11,15 @@
                 unset($_SESSION['logout']);
             }
             ?>
-            <h1 class="display-4 fw-bold lh-1 mb-3">Find. Love. Care.</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-                        popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
-                        extensive prebuilt components, and powerful JavaScript plugins.</p>
-            <a href="#main-content" class="btn btn-primary button-start">Get Started Now! :3</a>
+            <h1 class="display-4 fw-bold lh-1 mb-3">Cari. Cintai. Rawat.</h1>
+            <p class="lead">Cari kucing yang cocok denganmu disini.</p>
+            <a href="#main-content" class="btn btn-primary button-start">Mulai Sekarang! :3</a>
         </div>
     </div>
 
-    <div class="container" id="main-content">
+    <div class="container container-card" id="main-content">
         <div class="text-center mb-5 mt-5 text-header">
-            <h3>Cats Available for Adoption</h3>
+            <h3>Kucing Yang Siap Untuk Diadopsi</h3>
         </div>
         <div class="row">
         <?php
@@ -29,22 +27,22 @@
         $data = mysqli_query($koneksi, "SELECT * FROM data_kucing ORDER BY id DESC");
         while($cat = mysqli_fetch_array($data)){
             ?>
-            <div class="col-sm-3 mb-3">
-                <div class="card">
-                    <img src="cat/images/<?php echo $cat['gambar'] ?>" class="card-img-top" alt="...">
+            <div class="col-sm-4 mb-3">
+                <div class="card card-cat">
+                    <img src="cat/images/<?php echo $cat['gambar'] ?>" class="card-image" alt="...">
                     <div class="card-body">
                         <div class="icon">
                             <h5 class="card-title"><?php echo $cat['nama'] ?></h5>
                             <div class="location-card text-secondary" aria-label=""><i class="location-icon fas fa-map-marker-alt fa-fw"></i><?php echo $cat['lokasi'] ?></div>
                         </div>
-                        <p class="card-text"><?php echo $cat['deskripsi'] ?></p>
+                        <p class="card-text mt-2"><?php echo $cat['deskripsi'] ?></p>
                         <?php 
                         if(isset($_SESSION['email'])) {
                             ?>
                                 <a href="index.php?page=cat-detail&id=<?=$cat['id'] ?>" class="btn btn-primary">Detail</a>
                             <?php 
                         } else {
-                            $_SESSION['login'] = "Anda harus login";
+                            $_SESSION['login'] = "Anda harus login terlebih dahulu!";
                             ?>
                             <a href="login.php" class="btn btn-primary">Detail</a>
                             <?php 
