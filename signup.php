@@ -1,7 +1,6 @@
 <?php
 require('cat/signup-process.php');
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,6 +17,7 @@ require('cat/signup-process.php');
             <div class="card-body">
               <h2 class="card-title">Sign-Up</h2>
               <h6 class="card-subtitle text-muted mb-4 mt-2 fw-bold">Please sign-up to use this site!</h6>
+
               <form action="" method="POST">
                 <div class="input-signup">
                   <div class="mb-3">
