@@ -2,9 +2,7 @@
 require('cat/config.php');
 $id = $_GET['id'];
 $query = mysqli_query($koneksi, "SELECT * FROM data_kucing WHERE id='$id'");
-//$nomor = 1;
 $data = mysqli_fetch_array($query)
-// $jenis_kucing = array('Domestik/Kampung','Anggora','Persia','Siam','Maine Coon');
 ?>
     <div class="container bg-light mt-5 p-5">
         <h3 class="left mb-2">Edit Data Kucing</h3><hr>
@@ -18,17 +16,16 @@ $data = mysqli_fetch_array($query)
                 <input type="hidden" value="<?php echo $data['id'] ?>" name="id">
                 <input type="text" value="<?php echo $data['nama'] ?>" name="name" class="form-control" id="name" placeholder="Masukkan nama kucing anda ..">
             </div>
-            <div>
+            <div class="mb-3">
                 <label for="age" class="form-label">Usia</label>
-                <div class="input-group mb-3">
+                <div class="input-group">
                     <input type="text" value="<?php echo $data['umur'] ?>" name="age" class="form-control" placeholder="Masukkan usia kucing anda ..." aria-label="Masukkan usia kucing anda..." aria-describedby="basic-addon2">
                     <span class="input-group-text" id="basic-addon2">tahun</span>
                 </div>
             </div>
             <div class="form-group mb-3">
-                <label>Jenis Kucing</label>
+                <label class="form-label">Jenis Kucing</label>
                     <select class="form-select" name="species">
-                        <!-- <option>-Pilih Jenis Kucing-</option> -->
                         <option <?php if( $data['jenis_kucing']=='Domestik/Kampung'){echo "selected"; } ?> value='Domestik/Kampung'>Domestik/Kampung</option>
                         <option <?php if( $data['jenis_kucing']=='Anggora'){echo "selected"; } ?> value='Anggora'>Anggora</option>
                         <option <?php if( $data['jenis_kucing']=='Persia'){echo "selected"; } ?> value='Persia'>Persia</option>
@@ -36,38 +33,34 @@ $data = mysqli_fetch_array($query)
                         <option <?php if( $data['jenis_kucing']=='Maine Coon'){echo "selected"; } ?> value='Maine Coon'>Maine Coon</option>
                     </select>
             </div> 
-            <div>
+            <div class="mb-3">
                 <label for="weight" class="form-label">Berat</label>
-                <div class="input-group mb-3">
+                <div class="input-group">
                     <input type="text" value="<?php echo $data['berat'] ?>" name="weight" class="form-control" placeholder="Masukkan berat kucing anda ..." aria-label="Masukkan berat kucing anda..." aria-describedby="basic-addon2">
                     <span class="input-group-text" id="basic-addon2">kg</span>
                 </div>
             </div>
-            <div class="form-group mb-6">
-                <label>Jenis Kelamin</label>
+            <div class="form-group mb-3">
+                <label class="form-label">Jenis Kelamin</label>
                     <select class="form-select" name="gender">
                         <option <?php if( $data['jenis_kelamin']=='Jantan'){echo "selected"; } ?> value='Jantan'>Jantan</option>
                         <option <?php if( $data['jenis_kelamin']=='Betina'){echo "selected"; } ?> value='Betina'>Betina</option>
                     </select>
             </div>
-            <div class="input-group mb-3">
-                
-            </div>
             <div class="mb-3">
-                <label for="description">Deskripsi</label>
+                <label class="form-label" for="description">Deskripsi</label>
                 <textarea class="form-control"  id="description" name="description" rows="3" placeholder="Masukkan deskripsi mengenai kucing anda .."><?php echo $data['deskripsi'] ?></textarea>
             </div>
             <div class="mb-3">
-                <img class="img-fluid" src="cat/images/<?php echo $data['gambar'] ?>" 
+                <img class="img-fluid img-detail" src="cat/images/<?php echo $data['gambar'] ?>">
             </div>
             <div class="mb-3">
                 <label for="images" class="form-label">Gambar</label>
                 <input type="file" value="<?php echo $data['gambar'] ?>" name="images" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
             </div>
             <div class="form-group mb-3">
-                <label>Lokasi</label>
+                <label class="form-label">Lokasi</label>
                     <select class="form-select" name="location">
-                        <option>-Pilih Lokasi-</option>
                         <option <?php if( $data['lokasi']=='Bandung'){echo "selected"; } ?> value='Bandung'>Bandung</option>
                         <option <?php if( $data['lokasi']=='Tangerang'){echo "selected"; } ?> value='Tangerang'>Tangerang</option>
                         <option <?php if( $data['lokasi']=='Malang'){echo "selected"; } ?> value='Malang'>Malang</option>
